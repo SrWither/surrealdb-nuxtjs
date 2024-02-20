@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   nitro: {
-    plugins:['~/server/index.ts']
+    plugins:['~/server/db/index.ts']
   },
   postcss: {
     plugins: {

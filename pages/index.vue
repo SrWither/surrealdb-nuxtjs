@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <h1>{{ data[0].title }}</h1>
-    <h1>{{ data[0].content }}</h1>
-    <h1>{{ data[0].description }}</h1>
+  <div v-for="post in data" :key="post.id">
+    <h1>{{ post.title }}</h1>
+    <h1>{{ post.description }}</h1>
+    <h1>{{ post.content }}</h1>
   </div>
 </template>
 <script setup>

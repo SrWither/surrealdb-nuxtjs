@@ -1,4 +1,4 @@
-import db from '~/server/surrealdb';
+import db from '~/server/db/surrealdb';
 
 async function getPosts() {
   let posts = await db.select("Posts");
