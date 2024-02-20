@@ -1,5 +1,7 @@
 <template>
+  <h1>Posts: </h1>
   <div v-for="post in data" :key="post.id">
+    <NuxtLink :to="`/${post.id}`">{{ post.id }}</NuxtLink>
     <h1>{{ post.title }}</h1>
     <h1>{{ post.description }}</h1>
     <h1>{{ post.content }}</h1>
