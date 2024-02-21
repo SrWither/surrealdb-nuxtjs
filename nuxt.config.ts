@@ -5,6 +5,12 @@ export default defineNuxtConfig({
   nitro: {
     plugins:['~/server/db/index.ts']
   },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false
+    }
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},
