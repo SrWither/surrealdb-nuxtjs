@@ -11,11 +11,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#511730',
-        'secondary': '#8E443D',
-        'accent': '#CB9173',
-        'background': '#E0D68A',
-        'text': '#320A28',
+        'primary': '#4D1A7F',
+        'secondary': '#6D329A',
+        'accent': '#35125B',
+        'background': '#2E0D48',
+        'text': '#B3A0C0',
       },
     },
   },

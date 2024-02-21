@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Navbar />
+    <Navbar title="Blog" />
   </header>
   <main>
     <slot/>

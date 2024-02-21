@@ -1,6 +1,6 @@
 <template>
-  <nav class="bg-blue-500 p-3 m-2 rounded-xl shadow-xl flex justify-between items-center">
-    <h1>Blog</h1>
+  <nav class="bg-secondary p-3 px-4 m-2 rounded-xl shadow-xl flex justify-between items-center">
+    <h1 class="font-bold text-xl">{{title}}</h1>
 
     <ul class="flex space-x-3">
       <li>Link 1</li>
@@ -9,3 +9,9 @@
     </ul>
   </nav>
 </template>
+
+<script setup lang="ts">
+  defineProps<{
+    title: string
+  }>()
+</script>
