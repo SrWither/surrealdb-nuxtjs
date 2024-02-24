@@ -1,5 +1,16 @@
 <script setup lang="ts">
 const { data } = await useFetch<Post[]>("/api/posts");
+
+const formatDate = (date: Date) => {
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit'
+  }
+  return new Date(date).toLocaleString('en-US', options)
+}
 </script>
 
 <template>
@@ -10,6 +21,9 @@ const { data } = await useFetch<Post[]>("/api/posts");
           {{ post.description }}
 
           <template #footer>
+            <div class="text-purple-500">
+              {{formatDate(post.updated_at || new Date())}}
+            </div>
             <NuxtLink :to="`/${post.id}`">
               <Button label="Ver Más" />
             </NuxtLink>
