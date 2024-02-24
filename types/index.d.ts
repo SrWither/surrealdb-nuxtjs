@@ -7,8 +7,14 @@ declare global {
     created_at?: Date,
     updated_at?: Date,
   }
+
+  type AuthBody = {
+    email: string,
+    password: string
+  }
 }
 
 export {
-  Post
+  Post,
+  AuthBody
 }
