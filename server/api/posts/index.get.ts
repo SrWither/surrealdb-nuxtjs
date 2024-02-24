@@ -1,11 +1,10 @@
 import db from '~/server/db/surrealdb';
 
-async function getPosts() {
+const getPosts = async () => {
   let posts = await db.select("Posts");
-  // console.log(posts)
   return posts;
 }
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler(async (_event) => {
   return getPosts();
 })
