@@ -1,3 +1,9 @@
+<script setup>
+const route = useRoute()
+const postId = route.params.id
+const { data } = await useFetch(`/api/posts/${postId}`)
+</script>
+
 <template>
   <div>
     <NuxtLink to="/">Back</NuxtLink>
@@ -8,8 +14,3 @@
     <h1>{{ data.content }}</h1>
   </div>
 </template>
-<script setup>
-const route = useRoute()
-const postId = route.params.id
-const { data } = await useFetch(`/api/posts/${postId}`)
-</script>
